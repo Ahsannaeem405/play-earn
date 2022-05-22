@@ -29,7 +29,7 @@
                                 <span class="icon_mail"></span>
                             </div>
                             @error('email')
-                                <p  style="color:red !important;" class="invalid-feedback" role="alert">
+                                <p  style="color:red !important;" class="" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </p>
                             @enderror
@@ -38,19 +38,25 @@
                                 <span class="icon_profile"></span>
                             </div>
                             @error('name')
-                                <p  style="color:red !important;" class="invalid-feedback" role="alert">
+                                <p  style="color:red !important;" class="" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </p>
                             @enderror
                             <div class="input__item">
-                                <input type="password" placeholder="Password">
+                                <input id="password" type="password" class="@error('password') is-invalid @enderror" placeholder="Password" name="password">
                                 <span class="icon_lock"></span>
                             </div>
                             @error('password')
-                                <p  style="color:red !important;"class="invalid-feedback" role="alert">
+                                <p  style="color:red !important;" class="" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </p>
                             @enderror
+
+                            <div class="input__item">
+                                <input id="password-confirm" type="password" class="form-control" placeholder="Conform Password" name="password_confirmation" required>
+                                <span class="icon_lock"></span>
+
+                            </div>
                             <button type="submit" class="site-btn">Login Now</button>
                         </form>
                         <h5>Already have an account? <a href="{{ url('/login') }}">Log In!</a></h5>
