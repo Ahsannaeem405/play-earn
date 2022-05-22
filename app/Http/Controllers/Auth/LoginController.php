@@ -65,7 +65,7 @@ class LoginController extends Controller
     {
             try {
                 $user = Socialite::driver('google')->stateless()->user();
-                $finduser = User::where('google_id', $user->id)->first();
+                $finduser = User::where('email', $user->email)->first();
                 if($finduser){
                     Auth::login($finduser);
                     return redirect()->intended('/');
@@ -97,7 +97,7 @@ class LoginController extends Controller
     {
         try {
             $user = Socialite::driver('facebook')->stateless()->user();
-            $finduser = User::where('google_id', $user->id)->first();
+            $finduser = User::where('email', $user->email)->first();
             if($finduser){
                 Auth::login($finduser);
                 return redirect()->intended('/');
