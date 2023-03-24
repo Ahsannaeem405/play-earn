@@ -16,9 +16,12 @@ use App\Http\Controllers\Auth\Socialite;
 |
 */
 
-Route::get('/game', [GameController::class, 'index']);
-
-
+Route::get('/game', [GameController::class, 'game']);
+Route::get('/withdraw', [GameController::class, 'withdraw']);
+Route::get('/playgame', [GameController::class, 'playgame']);
+Route::any('/leaderboard', [GameController::class, 'leaderboard']);
+Route::get('/closemodel', [GameController::class, 'closemodel']);
+Route::post('/loginuser', [LoginController::class, 'loginuser']);
 
 
 

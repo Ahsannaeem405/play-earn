@@ -1723,7 +1723,7 @@ ol {
 
 .login__form {
 	position: relative;
-	padding-left: 145px;
+	/* padding-left: 145px; */
 }
 
 .login__form:after {
@@ -2005,7 +2005,7 @@ ol {
 
 @media only screen and (min-width: 1200px) {
 	.container {
-		max-width: 1170px;
+		max-width: 900px;
 	}
 }
 
@@ -2017,7 +2017,7 @@ ol {
 	}
 	.login__form {
 		position: relative;
-		padding-left: 32px;
+		margin-right: -34px;
 	}
 	.login__social__links ul li a {
 		width: 380px;
@@ -2040,7 +2040,7 @@ ol {
 		position: relative;
 	}
 	.header__right {
-		position: absolute;
+		
 		right: 120px;
 		top: -42px;
 		padding: 0;
@@ -2137,6 +2137,8 @@ ol {
 @media only screen and (max-width: 767px) {
 	.hero {
 		overflow: hidden;
+		font-size: 8px;
+		
 	}
 	.header {
 		position: relative;
@@ -2145,7 +2147,7 @@ ol {
 		position: relative;
 	}
 	.header__right {
-		position: absolute;
+		
 		right: 120px;
 		top: -42px;
 		padding: 0;

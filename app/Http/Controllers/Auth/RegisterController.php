@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
+use App\Models\History;
+
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -51,6 +53,7 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
+            'lastname' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
@@ -64,10 +67,52 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-        ]);
+        if(\Cookie::has("dumyuser"))
+        {
+
+            $id = \Cookie::get("dumyuser");
+            $user = User::where('id', $id)->first();
+            if($user != null)
+            {
+                // dd('hhh');
+                $da = User::find($id);
+                $da->name = $data['name'];
+                $da->lastname = $data['lastname'];
+                $da->email = $data['email'];
+                $da->password = Hash::make($data['password']);
+        
+                $da->save();
+                \Cookie::queue(\Cookie::forget('dumyuser'));
+                // History::where('user_id',$id)->update(['user_id'=> $user->id]);
+
+                // $history = new History;
+                // $history->user_id = Auth()->user()->id;
+                // $history->game_id = '1';
+                // $history->score = $scor;  
+                // $history->save();
+                // return redirect('/');
+               
+            }
+            
+            
+        }
+        else{
+
+            $da = user::create([
+                'name' => $data['name'],
+                'lastname' => $data['lastname'],
+                'email' => $data['email'],
+                'password' => Hash::make($data['password']),
+            ]);
+
+            
+       
+            // return $da;
+
+        }
+        return $da;
+        
+
+        
     }
 }

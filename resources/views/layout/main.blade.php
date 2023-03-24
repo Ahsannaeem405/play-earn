@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="zxx">
 
+
+@php
+
+$getscore =  getscore();
+
+@endphp
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Anime Template">
@@ -37,21 +43,22 @@
             <div class="row">
                 <div class="col-lg-2">
                     <div class="header__logo">
-                        <a href="/">Play And Earn
-                            <!-- <img src="img/logo.png" alt=""> -->
+                        <a href="{{('/')}}">
+                            <img src="img/hero/Logo.png" alt="" style="width: 114px;">
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-8">
+                <div class="col-lg-7">
                     <div class="header__nav">
                         <nav class="header__menu mobile-menu">
                             <ul>
-                                <li class="active"><a href="/">Home</a></li>
-                                
+                                <li class=""><a href="/">Home</a></li>
+                                <li><a href="/game">Game</a></li>
                                 
                                 @auth
-                                <li><a href="/game">Game</a></li>
-                                <li><a href="/register">withdraw</a></li>
+                                
+                                <li><a href="/withdraw">withdraw</a></li>
+                                <li><a id="dbDeleteth" href="logout">Logout <span class="fa fa-sign-out"></span></a></li>
                                 @else
                                 <li><a href="/login">Login</a></li>
                                 <li><a href="/register">Register</a></li>
@@ -60,12 +67,12 @@
                         </nav>
                     </div>
                 </div>
-                <div class="col-lg-2">
+                <div class="col-lg-3">
                     <div class="header__right">
                     @auth
 
-                        <a href="#" class="search-switch">Earned: $59</a>
-                        <a href="logout"><span class="icon_profile"></span></a></fom>
+                        <a href="#" class="search-switch">Earned: <span style="color:green;">@if($getscore)${{$getscore->highscore}}@endif</span></a>
+                        
                         @endauth
                     </div>
                 </div>
@@ -83,9 +90,9 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-lg-3">
+            <div class="col-lg-2">
                 <div class="footer__logo">
-                    <a href="/">Play And Earn</a>
+                    <a href="{{('/')}}"><img src="img/hero/Logo.png" alt="" style="width: 114px;"></a>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -134,6 +141,45 @@
 <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
 <script src="{{ asset('js/main.js') }}"></script>
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7235363930426530"
+     crossorigin="anonymous"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T18G5HESPV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-T18G5HESPV');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7235363930426530"
+     crossorigin="anonymous"></script>
+
+
+<script type = "text/javascript">
+            $('document').ready(function(){
+    $('#dbDeleteth').click(function(){
+    var req = indexedDB.deleteDatabase("c3-localstorage-1hak07i2nl58y");
+            console.log("Deleted database successfully");
+            window.location.href=window.location.href;
+        request.onupgradeneeded = function(event) {
+            var db = event.target.result;
+            var objectStore = db.createObjectStore("keyvaluepairs");
+         }
+            req.onsuccess = function () {
+                console.log("Deleted database successfully");
+            };
+            req.onerror = function () {
+                console.log("Couldn't delete database");
+            };
+            req.onblocked = function () {
+                console.log("Couldn't delete database due to the operation being blocked");
+            };
+         });
+    });
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7235363930426530"
+     crossorigin="anonymous"></script>
 
 </body>
 

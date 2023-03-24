@@ -33,12 +33,12 @@ return [
     'google' => [
         'client_id' => '903467824286-r7cpr27makcpdbfgr02drrab6ojiqu01.apps.googleusercontent.com',
         'client_secret' => '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',
-        'redirect' => 'http://localhost:8000/auth/google/callback',
+        'redirect' => 'https://play2-earn.com/auth/google/callback',
     ],
     'facebook' => [
         'client_id' => '432952581897073',
         'client_secret' => 'b9d612d0dcea27d9a443652acc581af7',
-        'redirect' => 'http://localhost:8000/auth/facebook/callback',
+        'redirect' => 'https://play2-earn.com/auth/facebook/callback',
       ], 
    
     
