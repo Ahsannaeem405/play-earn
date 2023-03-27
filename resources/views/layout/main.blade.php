@@ -9,7 +9,7 @@
     <meta name="keywords" content="Anime, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Play And Earn</title>
+    <title>Play To Earn</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -49,16 +49,16 @@
                     <div class="header__nav">
                         <nav class="header__menu mobile-menu">
                             <ul>
-                                <li class=""><a href="/">Home</a></li>
-                                <li><a href="/game">Game</a></li>
+                                <li class=""><a href="{{url('/')}}">Home</a></li>
+                                <li><a href="{{url('game')}}">Game</a></li>
 
                                 @auth
 
-                                <li><a href="/withdraw">withdraw</a></li>
-                                <li><a id="dbDeleteth" href="logout">Logout <span class="fa fa-sign-out"></span></a></li>
+                                <li><a href="{{url('withdraw')}}">withdraw</a></li>
+                                <li><a id="dbDeleteth" href="{{url('logout')}}">Logout <span class="fa fa-sign-out"></span></a></li>
                                 @else
-                                <li><a href="/login">Login</a></li>
-                                <li><a href="/register">Register</a></li>
+                                <li><a href="{{url('login')}}">Login</a></li>
+                                <li><a href="{{url('register')}}">Register</a></li>
                                 @endauth
                             </ul>
                         </nav>
@@ -89,19 +89,19 @@
         <div class="row">
             <div class="col-lg-2">
                 <div class="footer__logo">
-                    <a href="{{('/')}}"><img src="img/hero/Logo.png" alt="" style="width: 114px;"></a>
+                    <a href="{{url('/')}}"><img src="{{asset('img/hero/Logo.png')}}" alt="" style="width: 114px;"></a>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="footer__nav">
                     <ul>
-                        <li class="active"><a href="/">Home</a></li>
+                        <li class="active"><a href="{{url('/')}}">Home</a></li>
                         @auth
-                        <li><a href="/game">Game</a></li>
-                        <li><a href="/register">withdraw</a></li>
+                        <li><a href="{{url('game')}}">Game</a></li>
+                        <li><a href="{{url('withdraw')}}">withdraw</a></li>
                         @else
-                        <li><a href="/login">Login</a></li>
-                        <li><a href="/register">Register</a></li>
+                        <li><a href="{{url('login')}}">Login</a></li>
+                        <li><a href="{{url('register')}}">Register</a></li>
                         @endauth
                     </ul>
                 </div>

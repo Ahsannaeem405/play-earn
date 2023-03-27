@@ -47,45 +47,6 @@ $uurl_page=url('/game');
 </div>
 
 
-{{-- <!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Mech Carnage</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-
-<meta name="generator" content="Construct 3">
-	<meta name="author" content="Arcade Protocol Studios">
-	<meta name="description" content="Top-Down Arcade Shooter">
-	<link rel="manifest" href="{{asset('appmanifest.json')}}">
-	<link rel="apple-touch-icon" sizes="128x128" href="{{asset('icons/icon-128.png')}}">
-	<link rel="apple-touch-icon" sizes="256x256" href="{{asset('icons/icon-256.png')}}">
-	<link rel="icon" type="image/png" href="{{asset('icons/icon-256.png')}}">
-
-<link rel="stylesheet" href="{{asset('style.css')}}">
-
-</head>
-<body>
-	<a href="{{$uurl_page}}" id="dbDelete1" style="background: #12a3e0;color: white;padding: 4px;margin-left: 10px;text-decoration: none;
-">Back</a>
-
-<!-- <button onclick = "read()">Read </button>
-<p id="score"></p> -->
-<div id="fb-root"></div>
-
-	<noscript>
-		<div id="notSupportedWrap">
-			<h2 id="notSupportedTitle">This content requires JavaScript</h2>
-			<p class="notSupportedMessage">JavaScript appears to be disabled. Please enable it to view this content.</p>
-		</div>
-	</noscript>
-	<script src="{{asset('scripts/supportcheck.js')}}"></script>
-	<script src="{{asset('scripts/offlineclient.js')}}" type="module"></script>
-	<script src="{{asset('scripts/main.js')}}" type="module"></script>
-	<script src="{{asset('scripts/register-sw.js')}}" type="module"></script>
-	<script src="{{asset('jquery-2.1.1.min.js')}}"></script>
-
-	 --}}
 <script src="{{asset('jquery-2.1.1.min.js')}}"></script>
 <script type = "text/javascript">
     $('document').ready(function(){
