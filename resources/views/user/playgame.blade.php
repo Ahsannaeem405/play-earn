@@ -118,7 +118,10 @@ body{
     <a href="{{ url('/') }}" id="dbDeleten" style="position: absolute;
     z-index: 10000;background: #12A3E0;color: white;padding: 4px;margin-left: 10px;text-decoration: none;
     ">Back</a>
-<div class="container111">
+    <button class="btnfull btn btn-primary"  style="position: absolute;
+    z-index: 10000;background: #12A3E0;color: white;padding: 4px;margin-left: 60px;text-decoration: none;
+    " onclick="openFullscreen()">Full Screen</button>
+<div class="container111" id="fullscreen">
 <iframe class="responsive-iframe" src="{{asset('GalacticThreat/index.html')}}">
 </iframe>
 </div>
@@ -266,6 +269,23 @@ $("#btan2").click(function(){
 });
 
      </script>
+    <script>
+
+
+
+        var elem = document.getElementById("fullscreen");
+        function openFullscreen() {
+            elem.requestFullscreen();
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+            } else if (elem.webkitRequestFullscreen) { /* Safari */
+                elem.webkitRequestFullscreen();
+            } else if (elem.msRequestFullscreen) { /* IE11 */
+                elem.msRequestFullscreen();
+            }
+        }
+    </script>
+
 </body>
 </html>
 

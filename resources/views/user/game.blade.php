@@ -2,6 +2,7 @@
 @section('content')
     <!-- Header End -->
     <!-- Hero Section Begin -->
+
     <section class="hero">
         <div class="row">
             <div class="col-md-2">
@@ -188,4 +189,7 @@
         </div>
         </div>
     </section>
+
+
+
 @endsection
