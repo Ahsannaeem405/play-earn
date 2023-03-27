@@ -2350,7 +2350,7 @@ ol {
 }
 .game_bg{
 	position: absolute;
-    background-color: red;
+    /* background-color: red; */
 	opacity: 0.5;
     height: 100%;
     width: 100%;
@@ -2359,6 +2359,7 @@ ol {
     left: 0;
     right: 0;
     z-index: 1;
+	display: none;
 }
 .banner_icon i{
 	font-size: 270px;
@@ -2369,3 +2370,6 @@ ol {
 	align-items: center;
 	justify-content: center;
 }
+.banner .game_bg{
+	display: block;
+} 
