@@ -2342,3 +2342,30 @@ ol {
 		padding: 18px 20px 20px;
 	}
 }
+
+/* ahmad faraz */
+
+.banner{
+	position: relative;
+}
+.game_bg{
+	position: absolute;
+    background-color: red;
+	opacity: 0.5;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+.banner_icon i{
+	font-size: 270px;
+}
+.banner_icon{
+	height: 500px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
