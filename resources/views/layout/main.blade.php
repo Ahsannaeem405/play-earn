@@ -68,7 +68,7 @@
                     <div class="header__right">
                     @auth
 
-                        <a href="#" class="search-switch">Earned: <span style="color:green;">${{auth()->user()->balance}}</span></a>
+                        <a href="#" class="">Earned: <span style="color:green;">${{auth()->user()->balance}}</span></a>
 
                         @endauth
                     </div>
@@ -78,7 +78,10 @@
         </div>
     </header>
 
-    @yield('content')
+    <div class="container-fluid">
+        @yield('content')
+    </div>
+
 
 
     <footer class="footer">

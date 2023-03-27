@@ -17,7 +17,7 @@
             </div>
             <div class="col-md-8">
                 <div class="container ">
-                    <div class="banner">
+                    <div class="">
                         <div class="hero__slider owl-carousel ">
                             <div class="banner_bg">
                                 <div class="hero__items set-bg" data-setbg="img/hero/background.jpg">
@@ -72,7 +72,7 @@
             </div>
             <div class="col-md-8">
                 <div class="container ">
-                    <div class="banner">
+                    <div class=" {{ auth()->check() ? auth()->user()->balance>=$level::level_two ? '' : 'banner' : 'banner' }}">
                         <div class="hero__slider owl-carousel ">
                             <div class="banner_bg">
                                 <div class="hero__items set-bg" data-setbg="img/hero/background.jpg">
@@ -126,7 +126,7 @@
             </div>
             <div class="col-md-8">
                 <div class="container ">
-                    <div class="banner">
+                    <div class="{{ auth()->check() ? auth()->user()->balance>=$level::leve_three ? '' : 'banner' : 'banner' }}">
                         <div class="hero__slider owl-carousel ">
                             <div class="banner_bg">
                                 <div class="hero__items set-bg" data-setbg="img/hero/background.jpg">

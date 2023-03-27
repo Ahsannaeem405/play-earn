@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Consts\Levels;
 use App\Models\History;
 use App\Models\Score;
 use App\Models\User;
@@ -13,7 +14,10 @@ class GameController extends Controller
     public function game()
     {
 
-        return view('user.game');
+        $level=new Levels();
+
+
+        return view('user.game',compact('level'));
     }
 
     public function withdraw()
