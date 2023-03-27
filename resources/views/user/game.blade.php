@@ -109,6 +109,7 @@
                      (adsbygoogle = window.adsbygoogle || []).push({});
                 </script>
             </div>
+        </div>
     </section>
     <!--  -->
 
@@ -164,6 +165,7 @@
                     (adsbygoogle = window.adsbygoogle || []).push({});
                 </script>
             </div>
+        </div>
     </section>
     <!--  -->
 
