@@ -8,7 +8,7 @@ $uurl_page=url('/game');
 <title>Play2 earn</title>
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui" />
 <meta name="msapplication-tap-highlight" content="no"/>
-<link rel='shortcut icon' type='image/x-icon' href='GalacticThreat/favicon.ico'/>
+<link rel='shortcut icon' type='image/x-icon' href='{{asset('GalacticThreat/favicon.ico')}}'/>
 <style>
 body{
   background-color: black;
@@ -119,7 +119,7 @@ body{
     z-index: 10000;background: #12A3E0;color: white;padding: 4px;margin-left: 10px;text-decoration: none;
     ">Back</a>
 <div class="container111">
-<iframe class="responsive-iframe" src="GalacticThreat/index.html">
+<iframe class="responsive-iframe" src="{{asset('GalacticThreat/index.html')}}">
 </iframe>
 </div>
     <!-- <script src="{{asset('jquery-2.1.1.min.js')}}"></script> -->
