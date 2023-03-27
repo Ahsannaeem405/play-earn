@@ -24,7 +24,7 @@ $da2 =  gethistory2();
                 <script>
                      (adsbygoogle = window.adsbygoogle || []).push({});
                 </script>
-                
+
                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7235363930426530"
                      crossorigin="anonymous"></script>
                 <!-- Sidebar ads -->
@@ -52,7 +52,7 @@ $da2 =  gethistory2();
                                 </div>
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
                 <div class="container">
@@ -68,11 +68,11 @@ $da2 =  gethistory2();
                     <script>
                          (adsbygoogle = window.adsbygoogle || []).push({});
                     </script>
-                    
+
                     <h2 style="color:white;border-bottom: 2px solid white;">Space War:</h2><hr>
-                    <p style="color:white;">When the aliens from the far galaxy attacked Mars. The human race living on Mars defended their newly occupied planet. 
-                    Both have hi-tech starships and started to bombarded each other with laser weapons. You were on Mars special Ops at the moment. 
-                    Aliens were able to successfully destroy all of your companion ships, now its only you who's left. 
+                    <p style="color:white;">When the aliens from the far galaxy attacked Mars. The human race living on Mars defended their newly occupied planet.
+                    Both have hi-tech starships and started to bombarded each other with laser weapons. You were on Mars special Ops at the moment.
+                    Aliens were able to successfully destroy all of your companion ships, now its only you who's left.
                     Its your responsibility now to save your planet. Take a seat and start your mission and try to destroy all enemy ships. Good Luck.</p>
                     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7235363930426530"
                          crossorigin="anonymous"></script>
@@ -87,7 +87,7 @@ $da2 =  gethistory2();
                          (adsbygoogle = window.adsbygoogle || []).push({});
                     </script>
                 </div>
-                
+
             </div>
             <div class="col-md-2">
                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7235363930426530"
@@ -116,15 +116,15 @@ $da2 =  gethistory2();
                 </script>
             </div>
         </div>
-       
-    </section> 
-    
+
+    </section>
+
  <!-- Product Section Begin -->
-        
+
     <!-- Nav pills start-->
- 
+
     <div class="container" style="margin-top: 8%;">
-    
+
         <ul class="nav nav-pills" role="tablist">
             <li class="nav-item">
             <a class="nav-link active" data-toggle="pill" href="#home">Leaderboard</a>
@@ -140,7 +140,7 @@ $da2 =  gethistory2();
 <div class="tab-content">
     <section class="hero container tab-pane active" id="home">
         <div class="container">
-        
+
             <div class="hero__slider owl-carousel">
                 <table class="table tabl2" style="border: 2px solid white; color: white;">
                 <thead class="thead-light">
@@ -148,7 +148,7 @@ $da2 =  gethistory2();
                     <th scope="col">#</th>
                     <th scope="col">Name</th>
                     <th scope="col">Total Amount Earned</th>
-                    <th scope="col">Last Earned</th>
+                    <th scope="col">Last Score</th>
                     <th scope="col">Total Games Played</th>
                     </tr>
                 </thead>
@@ -157,13 +157,13 @@ $da2 =  gethistory2();
                     $k = 1;
                     @endphp
                     @foreach($da as $list)
-                    
+
                     @if($list->userdetal->name != "test")
 
                     <tr>
                         <th scope="row">{{$k}}</th>
                         <td>{{$list->userdetal->name}}</td>
-                        <td>{{$list->highscore}}</td>
+                        <td>${{$list->userdetal->balance}}</td>
                         <td>{{$list->score}}</td>
                         <td>{{$list->gameplay}}</td>
                     </tr>
@@ -171,15 +171,15 @@ $da2 =  gethistory2();
                     $k++;
                     @endphp
                     @endif
-                    
-                    
+
+
                     @endforeach
                 </tbody>
                 </table>
             </div>
         </div>
     </section>
-    
+
     <section class="hero container tab-pane fade" id="menu1">
         <div class="container">
             <div class="hero__slider owl-carousel">
@@ -197,13 +197,13 @@ $da2 =  gethistory2();
                     @php
                     $k1 = 1;
                     @endphp
-                
+
                     @foreach($da2 as $list2)
                     @if($list2->userdetal->name != "test")
                     <tr>
                         <th scope="row">{{$k1}}</th>
                         <td>{{$list2->userdetal->name}}</td>
-                        <td>{{$list2->highscore}}</td>
+                        <td>${{$list2->userdetal->balance}}</td>
                         <td>{{$list2->score}}</td>
                         <td>{{$list2->gameplay}}</td>
                     </tr>
@@ -213,10 +213,10 @@ $da2 =  gethistory2();
 
                     @endif
 
-                    
+
 
                 @endforeach
-                    
+
                 </tbody>
                 </table>
             </div>
@@ -237,10 +237,10 @@ $da2 =  gethistory2();
                  (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
         </div>
-    </section> 
+    </section>
     </div>
-       
-    
+
+
 </div>
 </div>
 </div>
@@ -263,7 +263,7 @@ $da2 =  gethistory2();
             <h3 style="color:white;">Surface Studio vs iMac – Which Should You Pick?</h3>
             <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
             </div>
-    
+
     </section>
 
     @endsection

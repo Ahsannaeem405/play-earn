@@ -1,6 +1,6 @@
 <?php
 session_start();
-$uurl_page=session()->get('URL_RETURN');
+$uurl_page=url('/game');
 ?>
 <!DOCTYPE html>
 <html>
@@ -102,7 +102,7 @@ body{
         <a href="{{route('register')}}" class="button-36 py-3 px-6" role="button">Register</a>
         <button href="" id="btan2" class="button-37 py-3 px-6">Play game</button>
       </div>
-      
+
     </div>
   </div>
 </div>
@@ -124,7 +124,7 @@ body{
 </div>
     <!-- <script src="{{asset('jquery-2.1.1.min.js')}}"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    
+
     <script type = "text/javascript">
             $('document').ready(function(){
     $('#dbDelete').click(function(){
@@ -209,8 +209,8 @@ body{
             var highscoreTop=localStorage.getItem('highscoreTop');
                   if(highscore > 0)
                      {
-                         
-                         
+
+
                         $.ajax({
                         url:"{{ url('/leaderboard') }}",
                         type:'post',
@@ -218,19 +218,20 @@ body{
                         data:{
                             "highscore":highscore,
                             "highscoreTop":highscoreTop,
+                            "game_id":1,
                         },
                         success:function(result){
                             // alert();
                             if(result.status == 'sucess')
                             {
-                                // alert(result.score);
+
                                 if($('#exampleModal').hasClass('show'))
                                 {
 
                                 }
                                 else{
                                   $("#exampleModalbtn").click();
- 
+
                                 }
                                 console.log(result.score);
 
@@ -244,14 +245,14 @@ body{
     }, 2000);
 
     $("#close").click(function(){
-      // 
+      //
       $.ajax({
                         url:"{{ url('/closemodel') }}",
                         type:'get',
-                        
+
                         success:function(result){
                             // alert();
-                          
+
                             //window.location.reload();
                         }
                     });
@@ -259,11 +260,11 @@ body{
 });
 
 $("#btan2").click(function(){
-    
+
     $("#close").click();
-    
+
 });
-    
+
      </script>
 </body>
 </html>

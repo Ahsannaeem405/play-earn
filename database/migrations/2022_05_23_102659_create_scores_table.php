@@ -19,7 +19,8 @@ class CreateScoresTable extends Migration
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->string('score')->nullable();
             $table->string('highscore')->nullable();
-            
+            $table->integer('game_id')->nullable();
+
             $table->timestamps();
         });
     }

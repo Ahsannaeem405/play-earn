@@ -19,6 +19,8 @@ use App\Http\Controllers\Auth\Socialite;
 Route::get('/game', [GameController::class, 'game']);
 Route::get('/withdraw', [GameController::class, 'withdraw']);
 Route::get('/playgame', [GameController::class, 'playgame']);
+Route::get('/playgame/pinball', [GameController::class, 'playgame_pinball']);
+Route::get('/playgame/tank_carnage', [GameController::class, 'playgame_tank_carnage']);
 Route::any('/leaderboard', [GameController::class, 'leaderboard']);
 Route::get('/closemodel', [GameController::class, 'closemodel']);
 Route::post('/loginuser', [LoginController::class, 'loginuser']);

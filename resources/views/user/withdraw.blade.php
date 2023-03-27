@@ -15,7 +15,7 @@ $getscore =  getscore();
     <!-- Hero Section Begin -->
     <section class="hero gg" style="height:270px;">
         <div class="container">
-            
+
                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7235363930426530"
                      crossorigin="anonymous"></script>
                 <!-- In feed -->
@@ -28,11 +28,11 @@ $getscore =  getscore();
                 <script>
                      (adsbygoogle = window.adsbygoogle || []).push({});
                 </script>
-            
+
         </div>
-    </section> 
-    
-    
+    </section>
+
+
     <section class="hero">
         <div class="row">
                 <div class="col-md-2">
@@ -53,16 +53,16 @@ $getscore =  getscore();
                 <div class="container">
                     <div class="">
                         <form>
-                            <div class="row mt-4" style="justify-content: center;">                    
+                            <div class="row mt-4" style="justify-content: center;">
                                 <div class="col-9">
                                     <label for="" style="color:white;"> Amout to Withdraw:</label>
                                 <input value="" id="withamout" type="number" class="form-control" min="1" placeholder="Enter Amout to Withdraw" onkeyup="this.value=this.value.replace(/[^0-9]/g,'.');">
                                 <p id="para" style="color: red;" class="d-none">kindly enter amount less then your earning</p>
-                                <input id="earn" val2="@if($getscore){{$getscore->highscore}}@endif" value="@if($getscore){{$getscore->highscore}}@endif" type="hidden">
+                                <input id="earn"  value="{{$getscore->balance}}" type="hidden">
                                 </div>
                             </div>
                             <div class="row" style="justify-content: center;">
-                                
+
                                 <div class="">
                                 <button disabled="disabled" id="submitbtn" type="button" class="btn btn-success mt-4">Review</button>
                                 </div>
@@ -74,7 +74,7 @@ $getscore =  getscore();
                             </div>
                             </div>
                         </form>
-                        
+
                     </div>
                 </div>
                 </div>
@@ -92,8 +92,8 @@ $getscore =  getscore();
                      (adsbygoogle = window.adsbygoogle || []).push({});
                 </script>
             </div>
-                
-    </section>     
+
+    </section>
     <!--  -->
 
 
@@ -119,9 +119,9 @@ $getscore =  getscore();
                 </script>
                 </div>
         </section>
-        
+
     </div>
-    
+
 </div>
 </div>
 </div>
@@ -135,7 +135,7 @@ $getscore =  getscore();
 
         var val1 = parseInt($(this).val());
 
-        var earn = parseInt($('#earn').val());
+        var earn = parseFloat($('#earn').val());
 
         if( val1 <= earn){
             // alert('ddd');
@@ -146,7 +146,7 @@ $getscore =  getscore();
             // alert('gggggggg');
             $("#submitbtn").prop('disabled', true);
             $("#para").removeClass('d-none');
-            
+
 
 
         }
@@ -167,4 +167,3 @@ $getscore =  getscore();
 
     @endsection
 
-    

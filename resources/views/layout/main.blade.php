@@ -1,12 +1,8 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
 
 
-@php
 
-$getscore =  getscore();
-
-@endphp
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Anime Template">
@@ -44,7 +40,7 @@ $getscore =  getscore();
                 <div class="col-lg-2">
                     <div class="header__logo">
                         <a href="{{('/')}}">
-                            <img src="img/hero/Logo.png" alt="" style="width: 114px;">
+                            <img src="{{asset('img/hero/Logo.png')}}" alt="" style="width: 114px;">
                         </a>
                     </div>
                 </div>
@@ -54,9 +50,9 @@ $getscore =  getscore();
                             <ul>
                                 <li class=""><a href="/">Home</a></li>
                                 <li><a href="/game">Game</a></li>
-                                
+
                                 @auth
-                                
+
                                 <li><a href="/withdraw">withdraw</a></li>
                                 <li><a id="dbDeleteth" href="logout">Logout <span class="fa fa-sign-out"></span></a></li>
                                 @else
@@ -71,8 +67,8 @@ $getscore =  getscore();
                     <div class="header__right">
                     @auth
 
-                        <a href="#" class="search-switch">Earned: <span style="color:green;">@if($getscore)${{$getscore->highscore}}@endif</span></a>
-                        
+                        <a href="#" class="search-switch">Earned: <span style="color:green;">${{auth()->user()->balance}}</span></a>
+
                         @endauth
                     </div>
                 </div>
